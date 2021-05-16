@@ -1,10 +1,10 @@
 import React, { useEffect , useState,  useContext} from "react";
 import axios from "axios";
-import Header from './Header'
+import Header from './shared/Header'
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
-import Nav from './Nav'
-import Welcome from './Welcome'
+import Nav from './shared/Nav'
+import Welcome from './shared/Welcome'
 import SavePosts from './SavedPosts'
 import AllPosts from './AllPosts'
 

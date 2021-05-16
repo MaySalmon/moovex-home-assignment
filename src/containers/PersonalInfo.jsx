@@ -1,7 +1,7 @@
 import React from "react";
-import Header from './Header'
-import Nav from './Nav'
-import Welcome from './Welcome'
+import Header from './shared/Header'
+import Nav from './shared/Nav'
+import Welcome from './shared/Welcome'
 
 const PersonalInfo = () => {
   var localdata = JSON.parse(localStorage.getItem('userid'));

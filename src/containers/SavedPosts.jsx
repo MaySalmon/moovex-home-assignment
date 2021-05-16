@@ -1,10 +1,10 @@
 import React, { useEffect , useState,  useRef,useContext} from "react";
 import axios from "axios";
-import Header from './Header'
+import Header from './shared/Header'
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
-import Nav from './Nav'
-import Welcome from './Welcome'
+import Nav from './shared/Nav'
+import Welcome from './shared/Welcome'
 
 const SavedPosts = () => {
 
@@ -47,18 +47,18 @@ const SavedPosts = () => {
     return (
       <div >
          
-            <div>
-                <h1>Saved Posts:</h1>
+            <div className="container">
+                <h1>Saved Posts:</h1><hr/>
                 {data.map((info) => {
                     if (info.userId === localdata.id){
                         return(    
                                 <div className="card" >
-                                    <div className="card-body">
-                                        <div className="card-title">{info.title}</div>
-                                        <div className="card-text"> {info.body}</div>
-                                        <div className="card-text"> {info.id}</div>
+                                    <div class="card-body">
+                                        
+                                        <p class="card-title"><strong>{info.title}</strong><hr/></p>
+                                        <p class="card-text"> {info.body}</p>
                                        
-                                        <i onClick={()=>removePost(info.id)} className="far fa-trash-alt">X</i>
+                                        <i className="click" onClick={()=>removePost(info.id)}><strong>Delete</strong></i>
                                     
                                     </div>
                                 </div>                     

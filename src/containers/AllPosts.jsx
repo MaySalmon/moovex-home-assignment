@@ -1,10 +1,10 @@
 import React, { useEffect , useState,  useContext} from "react";
 import axios from "axios";
-import Header from './Header'
+import Header from './shared/Header'
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
-import Nav from './Nav'
-import Welcome from './Welcome'
+import Nav from './shared/Nav'
+import Welcome from './shared/Welcome'
 
 const AllPosts = () => {
 
@@ -30,16 +30,15 @@ const AllPosts = () => {
     return (
       <div >
          
-            <div>
-                <h1>Posts:</h1>
+            <div className="container">
+                <h1>Posts:</h1><hr/>
                 {data.map((info) => {
                     if (info.userId !== localdata.id){
                         return(
                             <div className="card" >
                                     <div className="card-body">
-                                        <div className="card-title">{info.title}</div>
+                                        <div className="card-title"><strong>{info.title}</strong><hr/></div>
                                         <div className="card-text"> {info.body}</div>
-                                        <div className="card-text"> {info.id}</div>
                                    
                                     </div>
                                 </div> 

@@ -1,7 +1,7 @@
 import React, {useState, useField} from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import Header from './Header'
+import Header from './shared/Header'
 import styled from 'styled-components'
 import {useFormik,Formik, yupToFormErrors , Form} from 'formik'
 import * as Yup from 'yup';
@@ -13,15 +13,15 @@ const LoginInForm =()=>{
         const errors={}
 
         if(!values.email){
-            errors.email='Required'
+            errors.email='Email is required'
         }else if(values.email.length<4){
-            errors.email='Must be 5 Char or more'
+            errors.email='Email must be at least 4 characters'
         }
 
         if(!values.password){
-            errors.password='Required'
+            errors.password='Password is required'
         }else if(values.password.length<8){
-            errors.password='must be 8 char'
+            errors.password='Password must be at least 8 characters'
         }
 
         return errors;
@@ -52,7 +52,7 @@ const LoginInForm =()=>{
                 <input type="password" onChange={formik.handleChange} value={formik.values.password} onBlur={formik.handleBlur} id="password" name="password"/>
                 {formik.touched.password && formik.errors.password ? <div className="error">{formik.errors.password}</div>:null}
                 <Link to={`/home`}>
-                <button type="submit" disabled={!(formik.isValid && formik.dirty)} >Login</button>
+                <button className="login-btn" type="submit" disabled={!(formik.isValid && formik.dirty)} ><strong>Login</strong></button>
                 </Link>
             </form>
             </div>

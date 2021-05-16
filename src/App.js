@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Header from './containers/Header'
+import Header from './containers/shared/Header'
 import LogInForm from './containers/LogInForm'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Link } from 'react-router-dom';
