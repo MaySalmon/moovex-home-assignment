@@ -39,6 +39,8 @@ const AllPosts = () => {
                                     <div className="card-body">
                                         <div className="card-title">{info.title}</div>
                                         <div className="card-text"> {info.body}</div>
+                                        <div className="card-text"> {info.id}</div>
+                                   
                                     </div>
                                 </div> 
                          )
