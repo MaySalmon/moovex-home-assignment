@@ -15,6 +15,7 @@ function App() {
           <Switch>
             <Route path="/" exact component={LogInForm}/>
             <Route path="/home/:email" exact component={Home}/>
+            <Route path="/home" exact component={Home}/>
             <Route path="/posts/:id" exact component={Posts}/>
             <Route>404 not found!</Route>
           </Switch>

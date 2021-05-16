@@ -3,8 +3,12 @@ import axios from "axios";
 import Header from './Header'
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
+import Nav from './Nav'
+import Welcome from './Welcome'
+
 const Posts = () => {
 
+  var localId = JSON.parse(localStorage.getItem('userid'));
 
    const[data, setdata]= useState([]);
 
@@ -24,7 +28,9 @@ const Posts = () => {
 
     return (
       <div >
-         <Header/>
+         <Header />
+         <Welcome/>
+         <Nav id={localId}/>
             <div>
                 <h1>Saved Posts:</h1>
                 {data.map((info) => {
