@@ -10,7 +10,7 @@ const PersonalInfo = () => {
     
      <div >
          <Header/>
-         <Welcome/>
+         <Welcome name={localdata.name}/>
          <Nav/>
          <ul><strong>Your Name:</strong> {localdata.name}</ul>
          <ul><strong>Your email:</strong> {localdata.email}</ul>

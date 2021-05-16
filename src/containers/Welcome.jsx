@@ -1,12 +1,12 @@
 import React from "react";
 
 
-const Welcome = () => {
+const Welcome = ({name}) => {
     var localdata = JSON.parse(localStorage.getItem('userid'));
 
 
     return (
-    <div className="welcome">Welcome <strong>{localdata.name}</strong></div> 
+    <div className="welcome">Welcome <strong>{name}</strong></div> 
   );
 };
 

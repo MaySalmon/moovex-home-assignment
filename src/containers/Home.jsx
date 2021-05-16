@@ -29,7 +29,7 @@ const Home = () => {
     return (
       <div >
          <Header/>
-         <Welcome/>
+         <Welcome name={data.name}/>
          <Nav/>
       </div>
     );

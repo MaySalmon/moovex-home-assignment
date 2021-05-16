@@ -9,11 +9,13 @@ import SavePosts from './SavedPosts'
 import AllPosts from './AllPosts'
 
 const Posts = () => {
+  var localdata = JSON.parse(localStorage.getItem('userid'));
+
 
     return (
       <div >
          <Header />
-         <Welcome/>
+         <Welcome name={localdata.name}/>
          <Nav/>
          <SavePosts/>
          <AllPosts/>
