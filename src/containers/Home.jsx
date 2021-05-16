@@ -26,6 +26,26 @@ const Home = () => {
     
     },[]);
 
+    const fetchData2 =() => {
+
+        axios.get("https://jsonplaceholder.typicode.com/posts")
+        .then((response)=>{
+            console.log(response.data);
+            localStorage.setItem("localpostsdata", JSON.stringify(response.data));
+            setdata(response.data);
+        });
+
+    };
+
+    useEffect(() => {
+        if(localStorage.getItem('localbool') === "true")
+        {
+            fetchData2();
+            localStorage.setItem('localbool',false);
+        }
+
+    },[]);
+
     return (
       <div >
          <Header/>
