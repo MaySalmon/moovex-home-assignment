@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Link } from 'react-router-dom';
-
+import Header from './Header'
 const LoginInForm =()=>{
 
     const [email,setEmail]= useState('');
@@ -9,7 +9,10 @@ const LoginInForm =()=>{
 
 
     return(
+        <>
+        <Header/>
         <div className="login">
+            
             <form className="login_form"  >
             <h1>Login Here</h1>
             <input 
@@ -32,6 +35,7 @@ const LoginInForm =()=>{
             </Link>
             </form>
         </div>
+        </>
     );
 };
 

@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="homepage">
      
-        <h2>Moovex Home page</h2>
+        <h1>Moovex</h1><hr></hr>
         
       
     </div>

@@ -8,7 +8,7 @@ const Home = () => {
 
 
    const[data, setdata]= useState([]);
-  var localId = JSON.parse(localStorage.getItem('userid'));
+  var localdata = JSON.parse(localStorage.getItem('userid'));
    
    const fetchData =() => {
         axios.get("https://jsonplaceholder.typicode.com/users/1")
@@ -30,7 +30,7 @@ const Home = () => {
       <div >
          <Header/>
          <Welcome/>
-        <Nav id={localId}/>
+         <Nav/>
       </div>
     );
   };
