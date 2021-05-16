@@ -25,6 +25,7 @@ const AllPosts = () => {
         fetchData();
     },[]);
 
+    
 
     return (
       <div >
@@ -34,7 +35,12 @@ const AllPosts = () => {
                 {data.map((info) => {
                     if (info.userId !== localdata.id){
                         return(
-                            <li><strong>{info.title}</strong> - {info.body}</li>                   
+                            <div className="card" >
+                                    <div className="card-body">
+                                        <div className="card-title">{info.title}</div>
+                                        <div className="card-text"> {info.body}</div>
+                                    </div>
+                                </div> 
                          )
                     }
                 })}

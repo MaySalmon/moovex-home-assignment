@@ -25,6 +25,10 @@ const SavedPosts = () => {
         fetchData();
     },[]);
 
+    const removePost=(id)=>{
+         setdata(data.filter(todo=>todo.id!==id));
+    }
+    
 
     return (
       <div >
@@ -33,8 +37,15 @@ const SavedPosts = () => {
                 <h1>Saved Posts:</h1>
                 {data.map((info) => {
                     if (info.userId === localdata.id){
-                        return(
-                            <li><strong>{info.title}</strong> - {info.body}</li>                   
+                        return(    
+                                <div className="card" >
+                                    <div className="card-body">
+                                        <div className="card-title">{info.title}</div>
+                                        <div className="card-text"> {info.body}</div>
+                                        <i onClick={()=>removePost(info.id)} className="far fa-trash-alt">X</i>
+                                    
+                                    </div>
+                                </div>                     
                          )
                     }
                 })}
