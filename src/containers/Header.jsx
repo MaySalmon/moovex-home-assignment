@@ -2,11 +2,11 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="ui fixed menu">
-      <div className="ui container center">
+    <div className="homepage">
+      
         <h2>Moovex Home page</h2>
        
-      </div>
+      
     </div>
   );
 };

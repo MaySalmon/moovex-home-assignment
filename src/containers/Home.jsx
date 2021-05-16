@@ -2,6 +2,7 @@ import React, { useEffect , useState,  useContext} from "react";
 import axios from "axios";
 import Header from './Header'
 import { Link } from 'react-router-dom';
+import Nav from './Nav'
 
 const Home = () => {
 
@@ -25,13 +26,10 @@ const Home = () => {
     return (
       <div >
          <Header/>
-         <div>Welcome </div>
-         <div>  {data.name}</div>
-        <Link to={`/posts/${data.id}`}>
-            <button className="btn btn-primary">
-                Posts
-            </button>
-        </Link>
+         <div className="welcome">Welcome <strong>{data.name}</strong><hr/></div>
+        <Nav id={data.id}/>
+            
+            
          
       </div>
     );
