@@ -37,12 +37,11 @@ const SavedPosts = () => {
                 {JSON.parse(localStorage.getItem("localpostsdata")).map((info) => {
                     if (info.userId === localdata.id){
                         return(
-                                <div className="card" >
+                                <div key={info.id} className="card" >
                                     <div class="card-body">
 
                                         <p class="card-title"><strong>{info.title}</strong><hr/></p>
                                         <p class="card-text"> {info.body}</p>
-                                        <p class="card-text"> {info.id}</p>
 
                                         <i className="click" onClick={()=>removePost(info.id)}><strong>Delete</strong></i>
 

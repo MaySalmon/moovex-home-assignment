@@ -26,13 +26,23 @@ const AllPosts = () => {
 //     },[]);
 
     const addPost=(id)=>{
-        var object = [];
-        const arr = JSON.parse(localStorage.getItem('localpostsdata'));
-        object=arr[id];
-        object.userId=1;
-         arr.push(object);
-         localStorage.setItem("localpostsdata", JSON.stringify(arr));
-         window.location.reload();
+
+        // var object = [];
+        // const arr = JSON.parse(localStorage.getItem('localpostsdata'));
+        // for(let i=0; i< arr.length; i++){
+        //     if(arr[i].id === id)
+        //     {
+        //         object=arr[i];
+        //         object.userId=1;
+        //         arr.push(object);
+        //         localStorage.setItem("localpostsdata", JSON.stringify(arr));
+        //      window.location.reload();
+        //     }
+        // }
+        
+        
+         
+         
     }
 
     return (
@@ -47,6 +57,8 @@ const AllPosts = () => {
                                     <div className="card-body">
                                         <div className="card-title"><strong>{info.title}</strong><hr/></div>
                                         <div className="card-text"> {info.body}</div>
+                                        <p class="card-text"> {info.id}</p>
+
                                         <i className="click" onClick={()=>addPost(info.id)}><strong>Add Post</strong></i>
                                         
                                     </div>

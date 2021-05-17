@@ -51,9 +51,12 @@ const LoginInForm =()=>{
                 <label htmlFor="password">Password</label>
                 <input type="password" onChange={formik.handleChange} value={formik.values.password} onBlur={formik.handleBlur} id="password" name="password"/>
                 {formik.touched.password && formik.errors.password ? <div className="error">{formik.errors.password}</div>:null}
-                <Link to={`/home`}>
-                <button className="login-btn" type="submit" disabled={!(formik.isValid && formik.dirty)} ><strong>Login</strong></button>
-                </Link>
+                <button className="btn"  disabled={!(formik.isValid && formik.dirty)} type="button"
+                                        onClick={(e) => {
+                                        e.preventDefault();
+                                        window.location.href='/home';
+                                        }}><strong>Login</strong>
+                </button>
             </form>
             </div>
         </div>
