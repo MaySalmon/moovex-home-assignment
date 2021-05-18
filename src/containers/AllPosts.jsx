@@ -22,9 +22,9 @@ const AllPosts = () => {
                 {JSON.parse(localStorage.getItem("localpostsdata")).map((info) => {
                     if (info.userId !== localdata.id){
                         return(
-                            <div className="card" >
+                            <div key={info.id} className="card" >
                                     <div className="card-body">
-                                        <div className="card-title"><strong>{info.title}</strong><hr/></div>
+                                        <div className="card-title"><strong>{info.id}) {info.title}</strong><hr/></div>
                                         <div className="card-text"> {info.body}</div>
                                         <i className="click" onClick={()=>addPost(info)}><strong>Add Post</strong></i>
                                     </div>
