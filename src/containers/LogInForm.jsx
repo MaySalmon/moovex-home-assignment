@@ -3,7 +3,6 @@ import Header from './shared/Header'
 import {useFormik} from 'formik'
 // import {Formik, yupToFormErrors , Form} from 'formik'
 
-
 const LoginInForm =()=>{
     var localbool=localStorage.setItem('localbool', true);
     const validate=values=>{
@@ -36,7 +35,6 @@ const LoginInForm =()=>{
     })
 
     return(
-        
         <div>
             <Header/>
             <div className="login">
@@ -58,7 +56,6 @@ const LoginInForm =()=>{
             </div>
         </div>
     )
-
 };
 
 export default LoginInForm;

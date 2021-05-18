@@ -6,14 +6,6 @@ const SavedPosts = () => {
 
   var localdata = JSON.parse(localStorage.getItem('userid'));
 
-
-//    const[data, setdata]= useState([]);
-
-  
-
-
-
-
     const removePost=(id)=>{
         var array=[];
         //console.log('delete item' + id);
@@ -34,12 +26,9 @@ const SavedPosts = () => {
                         return(
                                 <div key={info.id} className="card" >
                                     <div className="card-body">
-
                                         <div className="card-title"><strong>{info.title}</strong><hr/></div>
                                         <div className="card-text"> {info.body}</div>
-
                                         <i className="click" onClick={()=>removePost(info.id)}><strong>Delete</strong></i>
-
                                     </div>
                                 </div>
                          )

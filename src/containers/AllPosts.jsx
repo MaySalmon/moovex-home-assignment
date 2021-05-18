@@ -17,7 +17,6 @@ const AllPosts = () => {
 
     return (
       <div >
-         
             <div className="container">
                 <h1>Posts:</h1><hr/>
                 {JSON.parse(localStorage.getItem("localpostsdata")).map((info) => {

@@ -16,25 +16,20 @@ const Home = () => {
             localStorage.setItem("userid", JSON.stringify(response.data));
             setdata(response.data);
             console.log(data);
-             
         });
-       
     };
 
     useEffect(() => {
         fetchUserData();
-    
     },[]);
 
     const fetchAllUsersData =() => {
-
         axios.get("https://jsonplaceholder.typicode.com/posts")
         .then((response)=>{
             console.log(response.data);
             localStorage.setItem("localpostsdata", JSON.stringify(response.data));
             setdata(response.data);
             window.location.reload();
-            
         });
 
     };

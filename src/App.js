@@ -9,7 +9,6 @@ import PersonalInfo from './containers/PersonalInfo'
 function App() {
   return (
     <div className="App">
-     
         <Router>
           <Switch>
             <Route path="/" exact component={LogInForm}/>

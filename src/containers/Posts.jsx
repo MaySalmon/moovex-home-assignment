@@ -8,7 +8,6 @@ import AllPosts from './AllPosts'
 const Posts = () => {
   var localdata = JSON.parse(localStorage.getItem('userid'));
 
-
     return (
       <div >
          <Header />

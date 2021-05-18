@@ -19,7 +19,6 @@ const Nav = () => {
             </Link>
             <hr/>    
         </nav>
-        
   );
 
 };
