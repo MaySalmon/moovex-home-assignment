@@ -2,7 +2,7 @@ import React from "react";
 
 
 const Welcome = ({name}) => {
-    var localdata = JSON.parse(localStorage.getItem('userid'));
+    // var localdata = JSON.parse(localStorage.getItem('userid'));
 
 
     return (

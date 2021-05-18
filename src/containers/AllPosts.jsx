@@ -1,48 +1,18 @@
-import React, { useEffect , useState,  useContext} from "react";
-import axios from "axios";
-import Header from './shared/Header'
-import { Link } from 'react-router-dom';
-import { useParams } from "react-router-dom";
-import Nav from './shared/Nav'
-import Welcome from './shared/Welcome'
+import React from "react";
 
 const AllPosts = () => {
 
   var localdata = JSON.parse(localStorage.getItem('userid'));
 
-//    const[data, setdata]= useState([]);
-
-//     const fetchData =() => {
-//         axios.get("https://jsonplaceholder.typicode.com/posts")
-//         .then((response)=>{
-//             console.log(response.data);
-//             setdata(response.data);
-//         });
-        
-//     };
-
-//     useEffect(() => {
-//         fetchData();
-//     },[]);
-
-    const addPost=(id)=>{
-
-        // var object = [];
-        // const arr = JSON.parse(localStorage.getItem('localpostsdata'));
-        // for(let i=0; i< arr.length; i++){
-        //     if(arr[i].id === id)
-        //     {
-        //         object=arr[i];
-        //         object.userId=1;
-        //         arr.push(object);
-        //         localStorage.setItem("localpostsdata", JSON.stringify(arr));
-        //      window.location.reload();
-        //     }
-        // }
-        
-        
-         
-         
+    const addPost=(info)=>{
+        const newObject=info;
+        const arr = JSON.parse(localStorage.getItem('localpostsdata')).filter(todo=>todo.id!==info.id);
+        localStorage.setItem("localpostsdata", JSON.stringify(arr))
+        window.location.reload();
+        newObject.userId=1;
+        arr.push(newObject);
+        localStorage.setItem("localpostsdata", JSON.stringify(arr))
+        window.location.reload();                  
     }
 
     return (
@@ -57,9 +27,9 @@ const AllPosts = () => {
                                     <div className="card-body">
                                         <div className="card-title"><strong>{info.title}</strong><hr/></div>
                                         <div className="card-text"> {info.body}</div>
-                                        <p class="card-text"> {info.id}</p>
+                                        <p className="card-text"> {info.id}</p>
 
-                                        <i className="click" onClick={()=>addPost(info.id)}><strong>Add Post</strong></i>
+                                        <i className="click" onClick={()=>addPost(info)}><strong>Add Post</strong></i>
                                         
                                     </div>
                                 </div> 

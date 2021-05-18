@@ -1,8 +1,5 @@
-import React, { useEffect , useState,  useContext} from "react";
-import axios from "axios";
+import React from "react";
 import Header from './shared/Header'
-import { Link } from 'react-router-dom';
-import { useParams } from "react-router-dom";
 import Nav from './shared/Nav'
 import Welcome from './shared/Welcome'
 import SavePosts from './SavedPosts'

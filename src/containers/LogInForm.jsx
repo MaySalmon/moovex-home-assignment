@@ -1,10 +1,7 @@
-import React, {useState, useField} from 'react'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Link } from 'react-router-dom';
+import React from 'react'
 import Header from './shared/Header'
-import styled from 'styled-components'
-import {useFormik,Formik, yupToFormErrors , Form} from 'formik'
-import * as Yup from 'yup';
+import {useFormik} from 'formik'
+// import {Formik, yupToFormErrors , Form} from 'formik'
 
 
 const LoginInForm =()=>{

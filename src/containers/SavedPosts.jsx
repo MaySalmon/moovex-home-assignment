@@ -1,10 +1,5 @@
-import React, { useEffect , useState,  useRef,useContext} from "react";
-import axios from "axios";
-import Header from './shared/Header'
-import { Link } from 'react-router-dom';
-import { useParams } from "react-router-dom";
-import Nav from './shared/Nav'
-import Welcome from './shared/Welcome'
+import React from "react";
+
 
 const SavedPosts = () => {
 
@@ -38,10 +33,10 @@ const SavedPosts = () => {
                     if (info.userId === localdata.id){
                         return(
                                 <div key={info.id} className="card" >
-                                    <div class="card-body">
+                                    <div className="card-body">
 
-                                        <p class="card-title"><strong>{info.title}</strong><hr/></p>
-                                        <p class="card-text"> {info.body}</p>
+                                        <p className="card-title"><strong>{info.title}</strong><hr/></p>
+                                        <p className="card-text"> {info.body}</p>
 
                                         <i className="click" onClick={()=>removePost(info.id)}><strong>Delete</strong></i>
 
