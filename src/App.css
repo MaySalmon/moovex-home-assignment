@@ -90,7 +90,7 @@ body {
   width: 300px;
   height: 300px;
   display: inline-flex ;
-  background: rgb(62, 91, 114);
+  background: rgb(110, 132, 150);
 } 
 
 .card-title{
@@ -109,7 +109,11 @@ body {
 }
 
 .click{
+  position: absolute;
+  color: rgb(64, 64, 99);
+  padding-bottom: 0;
   cursor: pointer;
+  bottom: 10px;
 }
 
 .guest-form-card{
@@ -119,6 +123,10 @@ body {
 .btn{
   background: rgb(190, 192, 199);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn cardbtn{
+  background: aqua;
 }
 
 .homepage img{
