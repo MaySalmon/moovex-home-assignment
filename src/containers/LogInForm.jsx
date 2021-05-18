@@ -40,7 +40,7 @@ const LoginInForm =()=>{
         <div>
             <Header/>
             <div className="login">
-            <h1>Login</h1>
+            <h1><strong>Login</strong></h1>
             <form className="login_form" onSubmit={formik.handleSubmit}>
                 <label htmlFor="email">Email Address</label>
                 <input onChange={formik.handleChange} value={formik.values.email} onBlur={formik.handleBlur} id="email" name="email"/>

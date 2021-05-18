@@ -27,10 +27,7 @@ const AllPosts = () => {
                                     <div className="card-body">
                                         <div className="card-title"><strong>{info.title}</strong><hr/></div>
                                         <div className="card-text"> {info.body}</div>
-                                        <p className="card-text"> {info.id}</p>
-
                                         <i className="click" onClick={()=>addPost(info)}><strong>Add Post</strong></i>
-                                        
                                     </div>
                                 </div> 
                          )
